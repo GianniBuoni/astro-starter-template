@@ -1,8 +1,26 @@
 services:
-  web:
-    build: .
-    container_name: astro-web-starter
+  dev:
+    build:
+      context: .
+      target: dev
+    container_name: astro-starter-dev
+    networks:
+      - astro
     ports:
       - 4321:4321
     volumes:
       - ".:/app"
+  runtime:
+    build:
+      context: .
+      target: runtime
+    container_name: astro-starter-runtime
+    profiles: [runtime]
+    networks:
+      - astro
+    ports:
+      - 8080:80
+networks:
+  astro:
+    driver: bridge
+    name: astro

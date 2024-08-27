@@ -10,13 +10,11 @@ I'm working on configuring it just the way I want to easily get up and running o
 - Astro Icon, Sitemap, RSS, Inegrations
 - Enabling prefetching,
 - Post CSS & Tailwind setup
-- Docker Image
+- Multistage Dockerfile & Compose
 
 ## ✅ To Do
 
-- [x] Add Tailwind Integrations
 - [ ] Find a Next-like Font solution
-- [ ] Add build process to Dockerfile/Compose
 
 ## 👀 Resources
 
