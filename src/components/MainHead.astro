@@ -1,4 +1,6 @@
 ---
+import { AstroFont } from "astro-font";
+
 interface Props {
   title: string;
   description: string;
@@ -12,7 +14,20 @@ const { title, description } = Astro.props;
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
-
   <title>{title}</title>
   <meta name="description" content={description} />
+  <AstroFont
+    config={[
+      {
+        src: [],
+        name: "Chivo",
+        googleFontsURL:
+          "https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap",
+        preload: true,
+        display: "swap",
+        selector: "body",
+        fallback: "sans-serif",
+      },
+    ]}
+  />
 </head>
