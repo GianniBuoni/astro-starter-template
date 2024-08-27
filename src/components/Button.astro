@@ -1,12 +1,10 @@
 ---
 interface Props {
-  color: "primary" | "secondary" | "neutral";
-  hover?: "primary" | "secondary" | "accent";
+  color: "btn-primary" | "btn-secondary" | "btn-neutral";
+  hover?: "hover:btn-primary" | "hover:btn-secondary" | "hover:btn-accent";
 }
 
 const { color, hover } = Astro.props;
 ---
 
-<button class:list={["btn","btn-sm", `btn-${color}`, "rounded", `hover:btn-${hover}`]}
-><slot />
-</button>
+<button class={`btn btn-sm ${color} rounded ${hover}`}><slot /> </button>
