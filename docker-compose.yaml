@@ -1,0 +1,8 @@
+services:
+  web:
+    build: .
+    container_name: astro-web-starter
+    ports:
+      - 4321:4321
+    volumes:
+      - ".:/app"
