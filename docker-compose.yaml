@@ -10,6 +10,18 @@ services:
       - 4321:4321
     volumes:
       - ".:/app"
+  test:
+    build:
+      context: .
+      target: runtime
+    container_name: astro-starter-test
+    profiles: [test]
+    networks:
+      - astro
+    volumes:
+      - ./dist:/usr/local/apache2/htdocs/
+    ports:
+      - 8080:80
   runtime:
     build:
       context: .

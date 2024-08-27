@@ -15,8 +15,10 @@ EXPOSE 4321
 CMD [ "pnpm", "start", "--host"]
 
 FROM base AS build
-RUN pnpm run build
+RUN pnpm run build && touch ./dist/.htaccess && echo "ErrorDocument 404 /404.html"> ./dist/.htaccess
 
 FROM httpd:2.4 AS runtime
+WORKDIR /usr/local/apache2/conf
+RUN sed -i 's/AllowOverride None/AllowOverride all/' httpd.conf
 COPY --from=build /app/dist /usr/local/apache2/htdocs/
 EXPOSE 80
