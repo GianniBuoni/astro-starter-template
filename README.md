@@ -7,15 +7,25 @@ I'm working on configuring it just the way I want to easily get up and running o
 
 - Typescript import aliases
 - Astro Content Collections
-- Astro Icon, Sitemap, RSS, Inegrations
-- Enabling prefetching,
+- Astro Icon, Sitemap, RSS Inegrations
+- Enabling prefetching
 - Post CSS & Tailwind setup
 - Multistage Dockerfile & Compose
 - Astro Font Setup
+- Basic components that I end up reusing all the time
+
+## 🐳 Docker
+
+The docker-compose file is split up into a three different profiles that target different my use cases.
+
+- `dev`: sets up a network exposed node server (with pnpm enabled); good for quick development and debugging/viewing on different machines
+- `test`: spins up an apache server that uses local build files; gives me a good preview to catch any build issues that don't show up in the dev environment
+- `runtime`: packages everything up; for use on the server only really
 
 ## ✅ To Do
 
 - [x] Find a Next-like Font solution
+- [ ] Expand `dockerfile` to include an SSR build environment (probably gonna stick with node)
 
 ## 👀 Resources
 
