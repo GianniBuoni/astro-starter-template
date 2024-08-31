@@ -1,12 +1,12 @@
 ---
-export const ButtonColors = {
+export const buttonColors = {
   primary: "btn-primary",
   secondary: "btn-secondary",
   neutral: "btn-neutral",
-  accent: "btn-accent"
+  accent: "btn-accent",
 };
 
-const HoverColors = {
+const hoverColors = {
   neutral: "hover:btn-neutral",
   primary: "hover:btn-primary",
   secondary: "hover:btn-secondary",
@@ -14,8 +14,8 @@ const HoverColors = {
 };
 
 interface Props {
-  color?: keyof typeof ButtonColors;
-  hover?: keyof typeof HoverColors;
+  color?: keyof typeof buttonColors;
+  hover?: keyof typeof hoverColors;
   classes?: string;
 }
 
@@ -25,8 +25,8 @@ const { color = "neutral", hover = "primary", classes, ...rest } = Astro.props;
 <button
   class:list={[
     "btn btn-sm rounded",
-    ButtonColors[color],
-    HoverColors[hover],
+    buttonColors[color],
+    hoverColors[hover],
     classes,
   ]}
   {...rest}
