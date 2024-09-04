@@ -3,30 +3,31 @@ services:
     build:
       context: .
       target: dev
-    container_name: astro-starter-dev
+    container_name: portfolio-project-dev
+    profiles: [dev]
     networks:
       - astro
     ports:
-      - 4321:4321
+      - 8080:4321
     volumes:
       - ".:/app"
   test:
     build:
       context: .
       target: runtime
-    container_name: astro-starter-test
+    container_name: portfolio-project-test
     profiles: [test]
     networks:
       - astro
-    volumes:
-      - ./dist:/usr/local/apache2/htdocs/
     ports:
-      - 8080:80
+      - 4321:4321
+    volumes:
+      - ./dist:/app/dist
   runtime:
     build:
       context: .
       target: runtime
-    container_name: astro-starter-runtime
+    container_name: portfolio-project-runtime
     profiles: [runtime]
     networks:
       - astro
