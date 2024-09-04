@@ -12,10 +12,13 @@ import node from "@astrojs/node";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-blog.app",
-  prefetch: true,
+  prefetch: {
+    prefetchAll: true,
+  },
   integrations: [icon(), sitemap(), tailwind()],
   output: "server",
   adapter: node({
-    mode: "standalone"
-  })
+    mode: "standalone",
+  }),
 });
+
