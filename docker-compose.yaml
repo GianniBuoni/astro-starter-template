@@ -3,7 +3,7 @@ services:
     build:
       context: .
       target: dev
-    container_name: portfolio-project-dev
+    container_name: astro-dev
     profiles: [dev]
     networks:
       - astro
@@ -15,7 +15,7 @@ services:
     build:
       context: .
       target: runtime
-    container_name: portfolio-project-test
+    container_name: astro-test
     profiles: [test]
     networks:
       - astro
@@ -27,7 +27,7 @@ services:
     build:
       context: .
       target: runtime
-    container_name: portfolio-project-runtime
+    container_name: astro-runtime
     profiles: [runtime]
     networks:
       - astro
