@@ -10,7 +10,8 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astro-blog.app",
-  integrations: [icon(), sitemap(), tailwind()]
-});  prefetch: {
+  prefetch: {
     prefetchAll: true,
   },
+  integrations: [icon(), sitemap(), tailwind()],
+});
