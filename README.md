@@ -13,6 +13,7 @@ I'm working on configuring it just the way I want to easily get up and running o
 - Multistage Dockerfile & Compose
 - Astro Font Setup
 - Basic components that I end up reusing all the time
+- A branch for SSR configuration (that defaults to Astro's hybrid mode)
 
 ## 🐳 Docker
 
@@ -25,7 +26,8 @@ The docker-compose file is split up into a three different profiles that target 
 ## ✅ To Do
 
 - [x] Find a Next-like Font solution
-- [ ] Expand `dockerfile` to include an SSR build environment (probably gonna stick with node)
+- [x] Expand `dockerfile` to include an SSR build environment (probably gonna stick with node)
+- [ ] Switch font solution. Relying on pulling fonts from google is a little slow in a production environment.
 
 ## 👀 Resources
 
