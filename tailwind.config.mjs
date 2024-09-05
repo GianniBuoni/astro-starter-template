@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Chivo", ...defaultTheme.fontFamily.sans],
+        sans: ["Chivo Variable", ...defaultTheme.fontFamily.sans],
       },
     },
   },

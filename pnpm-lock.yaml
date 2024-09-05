@@ -23,12 +23,12 @@ importers:
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.14.5(@types/node@22.5.0)(rollup@4.21.0)(typescript@5.5.4))(tailwindcss@3.4.10)
+      '@fontsource-variable/chivo':
+        specifier: ^5.0.15
+        version: 5.0.15
       astro:
         specifier: ^4.14.2
         version: 4.14.5(@types/node@22.5.0)(rollup@4.21.0)(typescript@5.5.4)
-      astro-font:
-        specifier: ^0.1.81
-        version: 0.1.81
       astro-icon:
         specifier: ^1.1.1
         version: 1.1.1
@@ -619,6 +619,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@fontsource-variable/chivo@5.0.15':
+    resolution: {integrity: sha512-C5K9VmjkutX5YzMKB9/NYEfPf9JTME4/bQ1lsWNwG3bQnHU96YxcqXPQ5B9liuAEPwDuUVbgJTTpgENuh92srA==}
+
   '@iconify/tools@4.0.5':
     resolution: {integrity: sha512-l8KoA1lxlN/FFjlMd3vjfD7BtcX/QnFWtlBapILMlJSBgM5zhDYak/ldw/LkKG3258q/0YmXa48sO/QpxX7ptg==}
 
@@ -1002,9 +1005,6 @@ packages:
 
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
-
-  astro-font@0.1.81:
-    resolution: {integrity: sha512-rbrv/+ZSYdgyjBlhkAqfCjMxqqo6iEwnSo/rAdDt/POILsF0ChxMFhefIIzKEukrRGtVjEj1lrLRYk+AdV9scQ==}
 
   astro-icon@1.1.1:
     resolution: {integrity: sha512-HKBesWk2Faw/0+klLX+epQVqdTfSzZz/9+5vxXUjTJaN/HnpDf608gRPgHh7ZtwBPNJMEFoU5GLegxoDcT56OQ==}
@@ -3571,6 +3571,8 @@ snapshots:
   '@esbuild/win32-x64@0.21.5':
     optional: true
 
+  '@fontsource-variable/chivo@5.0.15': {}
+
   '@iconify/tools@4.0.5':
     dependencies:
       '@iconify/types': 2.0.0
@@ -3946,8 +3948,6 @@ snapshots:
       dequal: 2.0.3
 
   array-iterate@2.0.1: {}
-
-  astro-font@0.1.81: {}
 
   astro-icon@1.1.1:
     dependencies:
