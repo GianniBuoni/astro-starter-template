@@ -21,8 +21,6 @@ services:
       - astro
     ports:
       - 4321:4321
-    volumes:
-      - ./dist:/app/dist
   runtime:
     build:
       context: .
